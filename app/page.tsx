@@ -8,8 +8,8 @@ const PHONE_NUMBERS = [
   '9216206267',
 ];
 
-const PRIMARY_PHONE = '9872511786';
-const PRIMARY_WHATSAPP = '9872511786';
+const PRIMARY_PHONE = '9216206267';
+const PRIMARY_WHATSAPP = '9216206267';
 
 export const metadata = {
   title: 'Delhi to Chandigarh One Way Taxi - Best Price | Guru Kirpa Tours',
