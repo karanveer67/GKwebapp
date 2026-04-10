@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Phone, MessageCircle, MapPin, Clock, Users, Shield, Star, CheckCircle2 } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, Users, Shield, Star, CheckCircle2, Building2, Landmark, BadgeCheck, Quote } from 'lucide-react';
 
 const PHONE_NUMBERS = [
   '9872511786',
@@ -17,6 +17,46 @@ export const metadata = {
 };
 
 export default function Home() {
+  const reviews = [
+    {
+      name: 'Rohit Sharma',
+      route: 'Delhi to Chandigarh',
+      initials: 'RS',
+      review: 'Booked a one way taxi for family travel. Car was clean, driver was polite, and the trip was comfortable throughout.',
+    },
+    {
+      name: 'Neha Verma',
+      route: 'Airport Pickup',
+      initials: 'NV',
+      review: 'Pickup was on time and the whole booking process was simple on call. Pricing was clear and there were no hidden charges.',
+    },
+    {
+      name: 'Amanpreet Singh',
+      route: 'Business Travel',
+      initials: 'AS',
+      review: 'Professional service, good vehicle condition, and smooth coordination. A reliable option for regular outstation travel.',
+    },
+  ];
+
+  const governmentClients = [
+    'DRDO',
+    'Air Force',
+    'Haryana Skill Department',
+  ];
+
+  const privateClients = [
+    'Fortis Hospital',
+    'Martin & Brown Bio Science Pvt. Ltd.',
+    'Ognibene India Pvt. Ltd.',
+    'Valco Industries Limited',
+  ];
+
+  const notableCompanies = [
+    'Swaraj',
+    'SML',
+    'Cheema Broiler',
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -41,7 +81,7 @@ export default function Home() {
             Book reliable, affordable taxi service with instant pickup & safe travel
           </p>
           <p className="text-lg text-white/80 mb-8">
-            ✅ 24x7 Availability | ✅ No Hidden Charges | ✅ Verified Drivers
+            âœ… 24x7 Availability | âœ… No Hidden Charges | âœ… Verified Drivers
           </p>
 
           {/* CTA Buttons */}
@@ -66,7 +106,7 @@ export default function Home() {
           {/* Quick Strip */}
           <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 inline-block">
             <p className="text-lg font-semibold">
-              ⚡ Call Now & Get Taxi in 10–15 Minutes | Limited Time Best Fare Available
+              Call Now & Get Taxi in 10 to 15 Minutes | Limited Time Best Fare Available
             </p>
           </div>
         </div>
@@ -100,35 +140,63 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center">Transparent Pricing</h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             <Card className="p-8 border-2 border-primary">
               <h3 className="text-2xl font-bold text-primary mb-2">Sedan</h3>
               <p className="text-gray-600 mb-4">Swift Dzire / Etios</p>
-              <div className="text-4xl font-bold text-primary mb-6">₹2,999 – ₹3,499</div>
+              <div className="text-4xl font-bold text-primary mb-6">₹3499</div>
               <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  <span>No Hidden Charges</span>
+                  <span>One Way Taxi</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  <span>Toll & Parking Extra (if applicable)</span>
+                  <span>Clean & Comfortable Ride</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                  <span>No Hidden Charges</span>
                 </li>
               </ul>
             </Card>
 
             <Card className="p-8 border-2 border-primary">
               <h3 className="text-2xl font-bold text-primary mb-2">SUV</h3>
-              <p className="text-gray-600 mb-4">Innova / Ertiga</p>
-              <div className="text-4xl font-bold text-primary mb-6">₹4,999 – ₹5,999</div>
+              <p className="text-gray-600 mb-4">Ertiga</p>
+              <div className="text-4xl font-bold text-primary mb-6">₹4499</div>
               <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                  <span>Spacious & Comfortable</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                  <span>Ideal for Family Travel</span>
+                </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-600" />
                   <span>No Hidden Charges</span>
                 </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8 border-2 border-primary">
+              <h3 className="text-2xl font-bold text-primary mb-2">Premium SUV</h3>
+              <p className="text-gray-600 mb-4">Innova Crysta</p>
+              <div className="text-4xl font-bold text-primary mb-6">₹5499</div>
+              <ul className="space-y-2">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-600" />
-                  <span>Toll & Parking Extra (if applicable)</span>
+                  <span>Premium & Luxury Ride</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                  <span>Extra Comfort for Long Travel</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
+                  <span>Professional Driver</span>
                 </li>
               </ul>
             </Card>
@@ -167,11 +235,11 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-xl font-bold mb-2">Distance</h3>
-                <p className="text-3xl font-bold text-primary">250–270 KM</p>
+                <p className="text-3xl font-bold text-primary">250 to 270 KM</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Travel Time</h3>
-                <p className="text-3xl font-bold text-primary">4–5 Hours</p>
+                <p className="text-3xl font-bold text-primary">4 to 5 Hours</p>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Experience</h3>
@@ -210,6 +278,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trust Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="rounded-3xl border border-primary/15 bg-gradient-to-br from-white via-primary/5 to-orange-50 p-8 md:p-10">
+            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                  <BadgeCheck className="h-4 w-4" />
+                  Trusted Service Profile
+                </div>
+                <h2 className="text-4xl font-bold text-balance">Serving government departments, institutions, and private clients with dependable transport support</h2>
+                <p className="mt-4 text-lg text-gray-700">
+                  Guru Kirpa Tours is registered under the GeM Portal, the Government e-Marketplace, and has supported transport requirements for government organizations as well as established private clients.
+                </p>
+                <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                  <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
+                    <Landmark className="mb-3 h-8 w-8 text-primary" />
+                    <h3 className="font-bold">Government Work</h3>
+                    <p className="mt-2 text-sm text-gray-600">Service support for public sector and departmental travel needs.</p>
+                  </div>
+                  <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
+                    <Building2 className="mb-3 h-8 w-8 text-primary" />
+                    <h3 className="font-bold">Corporate Clients</h3>
+                    <p className="mt-2 text-sm text-gray-600">Trusted by hospitals, private companies, and institutional clients.</p>
+                  </div>
+                  <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5">
+                    <Shield className="mb-3 h-8 w-8 text-primary" />
+                    <h3 className="font-bold">Professional Execution</h3>
+                    <p className="mt-2 text-sm text-gray-600">Clean vehicles, verified drivers, and coordinated travel support.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-5">
+                <Card className="rounded-2xl border-0 bg-white/90 p-6 shadow-sm">
+                  <h3 className="mb-3 text-xl font-bold text-primary">Registered Under GeM Portal</h3>
+                  <p className="text-gray-700">
+                    We are registered under the Government e-Marketplace and have worked with various government organizations and private clients for transportation support.
+                  </p>
+                </Card>
+
+                <Card className="rounded-2xl border-0 bg-white/90 p-6 shadow-sm">
+                  <h3 className="mb-3 text-lg font-bold">Government Organizations</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {governmentClients.map((client) => (
+                      <span key={client} className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+                        {client}
+                      </span>
+                    ))}
+                  </div>
+                </Card>
+
+                <Card className="rounded-2xl border-0 bg-white/90 p-6 shadow-sm">
+                  <h3 className="mb-3 text-lg font-bold">Private Clients</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {privateClients.map((client) => (
+                      <span key={client} className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                        {client}
+                      </span>
+                    ))}
+                  </div>
+                </Card>
+
+                <Card className="rounded-2xl border-0 bg-white/90 p-6 shadow-sm">
+                  <h3 className="mb-3 text-lg font-bold">Worked With Recognized Companies</h3>
+                  <p className="text-gray-700">
+                    In the past, we have also worked with well-known companies including {notableCompanies.join(', ')} and many more.
+                  </p>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Strong CTA Section */}
       <section className="py-16 px-4 bg-primary text-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -235,20 +378,39 @@ export default function Home() {
       {/* Customer Reviews */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Customer Reviews</h2>
+          <div className="mb-12 text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">Customer Feedback</p>
+            <h2 className="text-4xl font-bold">What Riders Say About Us</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              Clean vehicles, comfortable travel, transparent fares, and dependable coordination for family, airport, and business trips.
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              'Booked Delhi to Chandigarh taxi, driver was very polite and ride was smooth.',
-              'Best price and quick service. Highly recommended.',
-              'Clean car and on-time pickup. Great experience.',
-            ].map((review, idx) => (
-              <Card key={idx} className="p-6">
-                <div className="flex gap-1 mb-4">
+            {reviews.map((review) => (
+              <Card key={review.name} className="group overflow-hidden rounded-3xl border-0 bg-white p-0 shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl">
+                <div className="h-2 bg-gradient-to-r from-primary via-orange-400 to-primary" />
+                <div className="p-6">
+                  <div className="mb-5 flex items-start justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-lg font-bold text-primary">
+                        {review.initials}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-bold">{review.name}</h3>
+                        <p className="text-sm text-gray-500">{review.route}</p>
+                      </div>
+                    </div>
+                    <div className="rounded-full bg-primary/10 p-2 text-primary">
+                      <Quote className="h-4 w-4" />
+                    </div>
+                  </div>
+                  <div className="mb-4 flex gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                   ))}
+                  </div>
+                  <p className="text-gray-700">"{review.review}"</p>
                 </div>
-                <p className="text-gray-700 italic">"{review}"</p>
               </Card>
             ))}
           </div>
@@ -263,7 +425,7 @@ export default function Home() {
             {[
               {
                 q: 'Delhi to Chandigarh taxi fare kya hai?',
-                a: 'Sedan ₹2,999 se start hoti hai aur SUV ₹4,999 se.',
+                a: 'Sedan (Swift Dzire / Etios) ₹3499, SUV (Ertiga) ₹4499 aur Premium SUV (Innova Crysta) ₹5499 hai.',
               },
               {
                 q: 'One way taxi available hai?',
@@ -275,7 +437,7 @@ export default function Home() {
               },
               {
                 q: 'Kitna time lagta hai?',
-                a: 'Delhi se Chandigarh tak approx 4–5 hours lagta hai.',
+                a: 'Delhi se Chandigarh tak approx 4 to 5 hours lagta hai.',
               },
             ].map((item, idx) => (
               <Card key={idx} className="p-6">
@@ -343,7 +505,7 @@ export default function Home() {
               </p>
             </div>
             <p className="text-center text-gray-400 mt-4">
-              © 2024 Guru Kirpa Tours. All rights reserved.
+              Â© 2024 Guru Kirpa Tours. All rights reserved.
             </p>
           </div>
         </div>
